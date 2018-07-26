@@ -19,15 +19,15 @@ namespace WorkingWithMaps
 			};
 			openLocation.Clicked += (sender, e) => {
 
-				if (Device.OS == TargetPlatform.iOS) {
+				if (Device.RuntimePlatform == Device.iOS) {
 					//https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html
 					Device.OpenUri(new Uri("http://maps.apple.com/?q=394+Pacific+Ave+San+Francisco+CA"));
-				} else if (Device.OS == TargetPlatform.Android) {
+				} else if (Device.RuntimePlatform == Device.Android) {
 					// opens the Maps app directly
 					Device.OpenUri(new Uri("geo:0,0?q=394+Pacific+Ave+San+Francisco+CA"));
 
-				} else if (Device.OS == TargetPlatform.WinPhone) {
-					DisplayAlert("To Do", "Not yet implemented", "OK");
+				} else if (Device.RuntimePlatform == Device.UWP) {
+                    Device.OpenUri(new Uri("bingmaps:?where=394 Pacific Ave San Francisco CA"));
 				}
 			};
 
@@ -36,19 +36,18 @@ namespace WorkingWithMaps
 			};
 			openDirections.Clicked += (sender, e) => {
 
-				if (Device.OS == TargetPlatform.iOS) {
+				if (Device.RuntimePlatform == Device.iOS) {
 					//https://developer.apple.com/library/ios/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html
 					Device.OpenUri(new Uri("http://maps.apple.com/?daddr=San+Francisco,+CA&saddr=cupertino"));
 
-				} else if (Device.OS == TargetPlatform.Android) {
+				} else if (Device.RuntimePlatform == Device.Android) {
 					// opens the 'task chooser' so the user can pick Maps, Chrome or other mapping app
 					Device.OpenUri(new Uri("http://maps.google.com/?daddr=San+Francisco,+CA&saddr=Mountain+View"));
 
-				} else if (Device.OS == TargetPlatform.WinPhone) {
-					DisplayAlert("To Do", "Not yet implemented", "OK");
-				}
+				} else if (Device.RuntimePlatform == Device.UWP) {
+                    Device.OpenUri(new Uri("bingmaps:?rtp=adr.394 Pacific Ave San Francisco CA~adr.One Microsoft Way Redmond WA 98052"));
+                }
 			};
-
 			Content = new StackLayout{
 				Padding = new Thickness (5, 20, 5, 0),
 				HorizontalOptions = LayoutOptions.Fill,
@@ -61,4 +60,3 @@ namespace WorkingWithMaps
 		}
 	}
 }
-

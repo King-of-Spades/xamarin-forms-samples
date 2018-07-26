@@ -1,31 +1,26 @@
-﻿using System;
-
-using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using Android.App;
 using Android.OS;
-
-using Xamarin.Forms.Platform.Android;
 using Android.Content.PM;
-
 
 namespace UsingDependencyService.Android
 {
-	[Activity (Label = "UsingDependencyService.Android.Android", Icon = "@drawable/icon", MainLauncher = true, 
-		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : 
-	global::Xamarin.Forms.Platform.Android.FormsApplicationActivity // superclass new in 1.3
-	{
-		protected override void OnCreate (Bundle bundle)
-		{
-			base.OnCreate (bundle);
+    [Activity(Label = "UsingDependencyService.Android.Android", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true,
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    public class MainActivity :
+    global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    {
+        internal static MainActivity Instance { get; private set; }
 
-			global::Xamarin.Forms.Forms.Init (this, bundle);
+        protected override void OnCreate(Bundle bundle)
+        {
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
 
-			LoadApplication (new App ()); // method is new in 1.3
-		}
-	}
+            base.OnCreate(bundle);
+            Instance = this;
+            global::Xamarin.Forms.Forms.Init(this, bundle);
+            LoadApplication(new App());
+        }
+    }
 }
 

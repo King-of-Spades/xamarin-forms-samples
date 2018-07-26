@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.your-company.WorkingWithMaps.iOS</string>
+	<string>com.xamarin.WorkingWithMaps.iOS</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -11,7 +11,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
-	<string>7.0</string>
+	<string>9.0</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -37,8 +37,10 @@
 	<key>CFBundleDisplayName</key>
 	<string>Maps</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-		<string>We are using your location</string>
+	<string>We are using your location</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-		<string>Can we use your location</string>
+	<string>Can we use your location</string>
+	<key>CFBundleName</key>
+	<string>Maps</string>
 </dict>
 </plist>

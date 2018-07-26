@@ -14,7 +14,7 @@ namespace Phoneword
 
         void OnTranslate(object sender, EventArgs e)
         {
-            translatedNumber = Core.PhonewordTranslator.ToNumber(phoneNumberText.Text);
+            translatedNumber = PhonewordTranslator.ToNumber(phoneNumberText.Text);
             if (!string.IsNullOrWhiteSpace(translatedNumber))
             {
                 callButton.IsEnabled = true;
@@ -45,9 +45,9 @@ namespace Phoneword
             }
         }
 
-        void OnCallHistory(object sender, EventArgs e)
+        async void OnCallHistory(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CallHistoryPage());
+            await Navigation.PushAsync(new CallHistoryPage());
         }
     }
 }
