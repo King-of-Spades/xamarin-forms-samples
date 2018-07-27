@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:local="clr-namespace:FormsGallery"
@@ -28,32 +28,38 @@
                     <TextCell Text="Label"
                               Detail="Display a text string"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.LabelDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.LabelDemoPage}"
+                              AutomationId="LabelDemo" />
 
                     <TextCell Text="Image"
                               Detail="Display a bitmap"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.ImageDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.ImageDemoPage}"
+                              AutomationId="ImageDemo" />
 
                     <TextCell Text="BoxView"
                               Detail="Display a colored rectangle"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.BoxViewDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.BoxViewDemoPage}"
+                              AutomationId="BoxViewDemo" />
 
                     <TextCell Text="WebView"
                               Detail="Display a Web page"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.WebViewDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.WebViewDemoPage}"
+                              AutomationId="WebViewDemo" />
 
                     <TextCell Text="OpenGLView"
                               Detail="Display OpenGL Graphics"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.OpenGLViewDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.OpenGLViewDemoPage}"
+                              AutomationId="OpenGLViewDemo" />
 
                     <TextCell Text = "Map"
                               Detail="Display a map"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.MapDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.MapDemoPage}"
+                              AutomationId="MapDemo" />
                 </TableSection>
 
                 <TableSection Title="Views that Initiate Commands">
@@ -61,12 +67,14 @@
                     <TextCell Text="Button"
                               Detail="Initiate a command"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.ButtonDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.ButtonDemoPage}"
+                              AutomationId="ButtonDemo" />
 
                     <TextCell Text="SearchBar"
                               Detail="Initiate a search"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.SearchBarDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.SearchBarDemoPage}"
+                              AutomationId="SearchBarDemo" />
                 </TableSection>
                 
                 <TableSection Title="Views for Setting Values">
@@ -74,27 +82,32 @@
                     <TextCell Text= "Slider (double)"
                               Detail="Select a number from a continuous range"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.SliderDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.SliderDemoPage}"
+                              AutomationId="SliderDemo"/>
 
                     <TextCell Text="Stepper (double)"
                               Detail="Select a number from discrete increments"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.StepperDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.StepperDemoPage}"
+                              AutomationId="StepperDemo"/>
                     
                     <TextCell Text="Switch (bool)"
                               Detail="Select a Boolean value"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.SwitchDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.SwitchDemoPage}"
+                              AutomationId="SwitchDemo"/>
                     
                     <TextCell Text="DatePicker"
                               Detail="Select a date"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.DatePickerDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.DatePickerDemoPage}"
+                              AutomationId="DatePickerDemo"/>
 
                     <TextCell Text="TimePicker"
                               Detail="Select a time"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.TimePickerDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.TimePickerDemoPage}"
+                              AutomationId="TimePickerDemo"/>
                 </TableSection>
 
                 <TableSection Title="Views for Editing Text">
@@ -102,12 +115,14 @@
                     <TextCell Text="Entry (single line)"
                               Detail="Edit a single line of text"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.EntryDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.EntryDemoPage}"
+                              AutomationId="EntryDemo"/>
 
                     <TextCell Text="Editor (multiple lines)"
                               Detail="Edit a body of text"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.EditorDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.EditorDemoPage}"
+                              AutomationId="EditorDemo" />
                 </TableSection>
 
                 <TableSection Title="Views to Indicate Activity">
@@ -115,34 +130,40 @@
                     <TextCell Text="ActivityIndicator"
                               Detail="Show that the program is busy"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.ActivityIndicatorDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.ActivityIndicatorDemoPage}"
+                              AutomationId="ActivityIndicatorDemo"/>
                     
                     <TextCell Text="ProgressBar"
                               Detail="Show the progress of a program task"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.ProgressBarDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.ProgressBarDemoPage}"
+                              AutomationId="ProgressBarDemo"/>
                 </TableSection>
 
                 <TableSection Title="Views that Display Collections">
                     <TextCell Text="Picker"
                               Detail="Select from a list of text items"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.PickerDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.PickerDemoPage}"
+                              AutomationId="PickerDemo"/>
                     
                     <TextCell Text="ListView"
                               Detail="Select from a list of data items"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.ListViewDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.ListViewDemoPage}"
+                              AutomationId="ListViewDemo" />
 
                     <TextCell Text="TableView for a menu"
                               Detail="Show a table suitable for a menu"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.TableViewMenuDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.TableViewMenuDemoPage}"
+                              AutomationId="TableViewMenuDemo"/>
 
                     <TextCell Text="TableView for a form"
                               Detail="Show a table suitable for a form"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.TableViewFormDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.TableViewFormDemoPage}"
+                              AutomationId="TableViewFormDemo"/>
                 </TableSection>
 
                 <TableSection Title="Cells">
@@ -150,22 +171,26 @@
                     <TextCell Text="TextCell"
                               Detail="Display text in a ListView or TableView"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.TextCellDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.TextCellDemoPage}"
+                              AutomationId="TextCellDemo" />
 
                     <TextCell Text="ImageCell"
                               Detail="Display a bitmap in a ListView or TableView"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.ImageCellDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.ImageCellDemoPage}"
+                              AutomationId="ImageCellDemo" />
 
                     <TextCell Text="SwitchCell"
                               Detail="Display a Switch in a ListView or TableView"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.SwitchCellDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.SwitchCellDemoPage}"
+                              AutomationId="SwitchCellDemo" />
 
                     <TextCell Text="EntryCell"
                               Detail="Display an Entry in a ListView or TableView"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.EntryCellDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.EntryCellDemoPage}"
+                              AutomationId="EntryCellDemo" />
                 </TableSection>
 
 
@@ -174,17 +199,20 @@
                     <TextCell Text="ContentView"
                               Detail="Host a single child"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.ContentViewDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.ContentViewDemoPage}"
+                              AutomationId="ContentViewDemo" />
 
                     <TextCell Text="Frame"
                               Detail="Show a rectangle around a single child"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.FrameDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.FrameDemoPage}"
+                              AutomationId="FrameDemo"/>
 
                     <TextCell Text="ScrollView"
                               Detail="Scroll an item too large for the page"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.ScrollViewDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.ScrollViewDemoPage}"
+                              AutomationId="ScrollViewDemo" />
                 </TableSection>
 
                 <TableSection Title="Layouts with Multiple Children">
@@ -192,27 +220,32 @@
                     <TextCell Text="StackLayout"
                               Detail="Arrange children in a stack"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.StackLayoutDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.StackLayoutDemoPage}"
+                              AutomationId="StackLayoutDemo" />
                     
                     <TextCell Text="AbsoluteLayout"
                               Detail="Arrange children by coordinate positions"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.AbsoluteLayoutDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.AbsoluteLayoutDemoPage}"
+                              AutomationId="AbsoluteLayoutDemo" />
                     
                     <TextCell Text="Grid"
                               Detail="Arrange children in a grid"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.GridDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.GridDemoPage}"
+                              AutomationId="GridDemo" />
                     
                     <TextCell Text="RelativeLayout"
                               Detail="Arrange children relative to each other"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.RelativeLayoutDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.RelativeLayoutDemoPage}"
+                              AutomationId="RelativeLayoutDemo" />
 
                     <TextCell Text="FlexLayout"
                               Detail="Arrange children in a stack or a wrapped stack"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.FlexLayoutDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.FlexLayoutDemoPage}"
+                              AutomationId="FlexLayoutDemo" />
                 </TableSection>
 
                 <TableSection Title="Pages">
@@ -220,27 +253,32 @@
                     <TextCell Text="ContentPage"
                               Detail="Present a normal page"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.ContentPageDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.ContentPageDemoPage}"
+                              AutomationId="ContentPageDemo" />
                     
                     <TextCell Text="NavigationPage"
                               Detail="Present a navigatable page"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.NavigationPageDemoPage}" />
-
+                              CommandParameter="{x:Type local:XamlExamples.NavigationPageDemoPage}"
+                              AutomationId="NavigationPageDemo" />
+                    
                     <TextCell Text="MasterDetailPage"
                               Detail="Present two pages with a list and an item"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.MasterDetailPageDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.MasterDetailPageDemoPage}" 
+                              AutomationId="MasterDetailPageDemo" />
                     
                     <TextCell Text="TabbedPage"
                               Detail="Present a page with tabs"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.TabbedPageDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.TabbedPageDemoPage}"
+                              AutomationId="TabbedPageDemo" />
                     
                     <TextCell Text="CarouselPage"
                               Detail="Present a horizontally scrollable page"
                               Command="{Binding NavigateCommand}"
-                              CommandParameter="{x:Type local:XamlExamples.CarouselPageDemoPage}" />
+                              CommandParameter="{x:Type local:XamlExamples.CarouselPageDemoPage}"
+                              AutomationId="CarouselPageDemo"/>
                 </TableSection>
             </TableRoot>
         </TableView>
