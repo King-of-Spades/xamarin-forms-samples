@@ -31,10 +31,31 @@ namespace FormsGallery.UITest
             app.Screenshot("First screen.");
         }
 
+        //[Test]
+        //public void PickerView()
+        //{
+        //    app.Repl();
+        //}
+
         [Test]
-        public void PickerView()
+        public void ListView()
         {
-            app.Repl();
+            //C# version
+            app.ScrollDownTo("ListView");
+            app.Tap("ListView");
+
+            app.ScrollDownTo("Uma");
+            app.Tap("Uma");
+
+            app.Back();
+
+            //XAML version
+            app.Tap("XAML Pages");
+            app.ScrollDownTo("ListView");
+            app.Tap("ListView");
+
+            app.ScrollDownTo("Uma");
+            app.Tap("Uma");
         }
     }
 }
