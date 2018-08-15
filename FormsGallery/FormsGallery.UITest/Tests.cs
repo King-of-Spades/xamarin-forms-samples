@@ -31,11 +31,11 @@ namespace FormsGallery.UITest
             app.Screenshot("First screen.");
         }
 
-        //[Test]
-        //public void PickerView()
-        //{
-        //    app.Repl();
-        //}
+        [Test]
+        public void Repl()
+        {
+            app.Repl();
+        }
 
         [Test]
         public void ListView()
